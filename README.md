@@ -10,6 +10,14 @@ Using:
         (function () {
             $(function () {
                 $.progressBar({imagePath: "ajax-loader.gif"});
+                (function () {
+	$(function () {
+		$.progressBar({imagePath: "ajax-loader.gif"});
+		setTimeout(function () {
+			$.progressBar('hide');
+		}, 5000);
+	})
+})();
             })
         })();
     </script>
