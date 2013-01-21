@@ -10,7 +10,7 @@ Using:
     <script type="text/javascript">
         (function () {
             $(function () {
-                $.progressBar({imagePath: "ajax-loader.gif"});
+                $.progressBar();
                 setTimeout(function () {
                     $.progressBar('hide');
                 }, 5000);
