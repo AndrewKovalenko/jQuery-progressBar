@@ -1,32 +1,24 @@
 (function ($) {
 
-    var htmlTemplate = '<div class="jq-progressbar"><img alt="progress"/></div>';
+    var htmlTemplate = '<div class="jq-progressbar"><div class="progressImage"/></div>';
 
-    $.progressBar = function (data) {
-        if (typeof data === 'string' && methods[data]) {
-            methods[data].call(this);
-        } else if (data.imagePath) {
-            methods.init.call(this, data.imagePath)
+    $.progressBar = function (method) {
+        if (typeof method === 'string' && methods[method]) {
+            methods[method].call(this);
+        } else if(!method){
+            methods.init.call(this);
         } else{
-            $.error('There is no method with name' + data + ' in jQuery.progressBar or wrong initial data format');
+            $.error('There is no method with name' + method + ' in jQuery.progressBar');
         }
     };
 
-    var show = function (imagePath) {
-        if (imagePath)
-            this.init.call(this, imagePath);
-        $("body div.jq-progressbar").show();
-    };
-
     var methods = {
-        init: function (imagePath) {
+        init: function () {
             var progressBarElement = $("body div.jq-progressbar");
             if (progressBarElement.length == 0) {
                 $("body").append(htmlTemplate);
                 progressBarElement = $("body div.jq-progressbar");
             }
-            var imageTag = progressBarElement.find("img");
-            imageTag.attr("src", imagePath);
             progressBarElement.show();
         },
 
