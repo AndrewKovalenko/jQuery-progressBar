@@ -1,0 +1,24 @@
+div.jq-progressbar{
+	position: absolute;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	
+	display: table-cell; 
+	vertical-align: middle;
+
+	text-align: center;
+	top: 0;
+	left: 0;
+}
+
+div.jq-progressbar div.progressImage{
+	margin-top: 22%;
+    
+    /*height of the image and image path*/
+    height: 55px; 
+	background-image: url(/Content/images/ajax-loader.gif);
+    background-repeat:no-repeat;
+    background-position:center; 
+}
