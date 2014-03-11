@@ -18,7 +18,7 @@ div.jq-progressbar div.progressImage{
     
     /*height of the image and image path*/
     height: 55px; 
-	background-image: url(/Content/images/ajax-loader.gif);
+	background-image: url('/Content/images/ajax-loader.gif');
     background-repeat:no-repeat;
     background-position:center; 
 }

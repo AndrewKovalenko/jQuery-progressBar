@@ -14,12 +14,18 @@
 
     var methods = {
         init: function () {
-            var progressBarElement = $("body div.jq-progressbar");
-            if (progressBarElement.length == 0) {
+            var progresBarTag = $("body div.jq-progressbar");
+            if (progresBarTag.length == 0) {
                 $("body").append(htmlTemplate);
-                progressBarElement = $("body div.jq-progressbar");
+                progresBarTag = $("body div.jq-progressbar");
             }
-            progressBarElement.show();
+            
+            var imageTag = progresBarTag.find('div.progressImage');
+            var screenHeight = $(document).height();
+
+            imageTag.css('margin-top', (screenHeight - imageTag.height()) / 2);
+            progresBarTag.css('height', screenHeight);
+            progresBarTag.show();
         },
 
         hide: function () {
