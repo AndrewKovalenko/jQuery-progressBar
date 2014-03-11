@@ -1,7 +1,7 @@
 jquery-progressBar
 ==================
 
-Very small and lightweight jquery plugin to show progressbar
+Very small and lightweight jquery plugin to show (and hide :-)) screen-blocker
 
 Using:
 
